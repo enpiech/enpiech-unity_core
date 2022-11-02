@@ -1,0 +1,22 @@
+{
+  "name": "Core.Editor",
+  "rootNamespace": "",
+  "references": [
+    "UnityAtoms.UnityAtomsCore.Editor",
+    "UnityAtoms.UnityAtomsCore.Runtime",
+    "Core",
+    "Unity.TextMeshPro",
+    "Unity.TextMeshPro.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
