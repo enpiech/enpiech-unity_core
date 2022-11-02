@@ -2,11 +2,11 @@
   "name": "Core.Editor",
   "rootNamespace": "",
   "references": [
-    "UnityAtoms.UnityAtomsCore.Editor",
-    "UnityAtoms.UnityAtomsCore.Runtime",
-    "Core",
-    "Unity.TextMeshPro",
-    "Unity.TextMeshPro.Editor"
+    "GUID:87264ae76e36244ae9adf5b5fbf7ca19",
+    "GUID:14165214884ae4a619bfb290f28194a7",
+    "GUID:88b44277d1af12c4ba7d7d373d3f1c24",
+    "GUID:6055be8ebefd69e48b49212b09b47b2f",
+    "GUID:6546d7765b4165b40850b3667f981c26"
   ],
   "includePlatforms": [
     "Editor"

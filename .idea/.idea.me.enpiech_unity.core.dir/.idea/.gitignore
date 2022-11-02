@@ -2,9 +2,9 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
+/.idea.me.enpiech_unity.core.iml
 /projectSettingsUpdater.xml
 /modules.xml
 /contentModel.xml
-/.idea.Core.iml
 # Editor-based HTTP Client requests
 /httpRequests/
