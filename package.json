@@ -4,7 +4,6 @@
   "displayName": "Core",
   "description": "This is a core package",
   "unity": "2021.3",
-  "unityRelease": "11f1",
   "scopedRegistries": [
     {
       "name": "Editor",
