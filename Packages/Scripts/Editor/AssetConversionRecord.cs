@@ -3,7 +3,7 @@ using System;
 //using UnityEngine.SceneManagement;
 //using System.Globalization;
 
-namespace Core.Editor
+namespace Enpiech.Core.Editor
 {
     // Suppressing warnings related to the use of private structures which are confusing the compiler as these data structures are used by .json files.
 #pragma warning disable 0649

@@ -1,16 +1,18 @@
 {
-  "name": "Core.Editor",
+  "name": "Core.Runtime",
   "rootNamespace": "Enpiech.Core",
   "references": [
-    "UnityAtoms.UnityAtomsCore.Editor",
+    "Unity.Addressables",
+    "NaughtyAttributes.Core",
+    "UnityAtoms.UnityAtomsBaseAtoms.Runtime",
     "UnityAtoms.UnityAtomsCore.Runtime",
-    "Core.Runtime",
-    "Unity.TextMeshPro",
-    "Unity.TextMeshPro.Editor"
+    "Unity.Localization",
+    "Unity.ResourceManager",
+    "UniTask",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.TextMeshPro"
   ],
-  "includePlatforms": [
-    "Editor"
-  ],
+  "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
   "overrideReferences": false,

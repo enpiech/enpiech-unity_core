@@ -14,7 +14,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.U2D;
 using UnityEngine.Video;
 
-namespace Core.Editor
+namespace Enpiech.Core.Editor
 {
     /// <summary>
     ///     Data structure containing a list of target and replacement fileID and GUID requiring remapping from previous
