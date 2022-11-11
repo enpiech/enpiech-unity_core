@@ -147,8 +147,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f880fbcc5f438eada902a253c9e6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   _buttonText: {fileID: 4282707000043463280}
   _button: {fileID: 4282706999763039468}
+  Clicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4282707000043463286
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +174,7 @@ GameObject:
   - component: {fileID: 4282707000043463283}
   - component: {fileID: 4282707000043463280}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text_Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
