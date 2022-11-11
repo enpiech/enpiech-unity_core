@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
@@ -6,18 +7,17 @@ using UnityEngine.UI;
 
 namespace Core.UI
 {
-    public sealed class UIGenericButton : MonoBehaviour
+    public sealed class UIGenericButton : SerializedMonoBehaviour
     {
         [Header("Config")]
         [SerializeField]
-        [Tooltip("Nullable")]
         private LocalizeStringEvent? _buttonText;
 
         [Header("Reference")]
         [SerializeField]
         private Button _button = default!;
 
-        public UnityAction Clicked = delegate { };
+        public UnityEvent Clicked;
 
         public void SetButton(bool isSelected)
         {
