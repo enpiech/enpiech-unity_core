@@ -1,10 +1,9 @@
 {
-  "name": "me.enpiech_unity.core",
+  "name": "me.enpiech.core",
   "version": "1.0.0",
   "displayName": "Core",
   "description": "This is a core package",
   "unity": "2021.3",
-  "unityRelease": "11f1",
   "scopedRegistries": [
     {
       "name": "Editor",
@@ -34,5 +33,6 @@
     "name": "Enpiech",
     "email": "enpiech@gmail.com",
     "url": "https://github.com/enpiech"
-  }
+  },
+  "type": "sample"
 }

@@ -1,0 +1,22 @@
+{
+  "name": "Core.Editor",
+  "rootNamespace": "Enpiech.Core",
+  "references": [
+    "UnityAtoms.UnityAtomsCore.Editor",
+    "UnityAtoms.UnityAtomsCore.Runtime",
+    "Core.Runtime",
+    "Unity.TextMeshPro",
+    "Unity.TextMeshPro.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
