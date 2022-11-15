@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Enpiech.Core.Runtime.UI.Data
 {
     [Serializable]
-    public class Fade
+    public struct Fade : IEquatable<Fade>
     {
         [SerializeField]
         private bool _isFadeIn;
@@ -28,6 +28,11 @@ namespace Enpiech.Core.Runtime.UI.Data
 
         public Color Color => _color;
 
+        public bool Equals(Fade other)
+        {
+            return _isFadeIn == other._isFadeIn && _duration.Equals(other._duration) && _color.Equals(other._color);
+        }
+
         public static Fade In(float duration)
         {
             return new Fade(true, duration, Color.clear);
@@ -36,6 +41,26 @@ namespace Enpiech.Core.Runtime.UI.Data
         public static Fade Out(float duration)
         {
             return new Fade(false, duration, Color.black);
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Fade other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(_isFadeIn, _duration, _color);
+        }
+
+        public static bool operator ==(Fade left, Fade right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Fade left, Fade right)
+        {
+            return !left.Equals(right);
         }
     }
 }
