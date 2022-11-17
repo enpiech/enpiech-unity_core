@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using Enpiech.Core.Runtime.Gameplay.Setting.AtomGenerated.Constants;
 using Enpiech.Core.Runtime.Gameplay.Setting.AtomGenerated.Events;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
@@ -14,6 +15,9 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
 
         [SerializeField]
         private string _backupSaveFileName = "save.cricket.bak";
+
+        [SerializeField]
+        private SettingConstant _defaultSetting = default!;
 
         [Header("Listening to")]
         [SerializeField]
@@ -82,7 +86,7 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
         {
             FileManager.WriteToFile(_saveFileName, string.Empty);
 
-            SaveDataToDisk(new Setting.Setting());
+            SaveDataToDisk(_defaultSetting.Value);
         }
 
         public void WriteEmptySaveFile()

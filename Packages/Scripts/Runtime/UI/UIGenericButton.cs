@@ -1,5 +1,4 @@
-﻿using Sirenix.OdinInspector;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
@@ -7,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Enpiech.Core.Runtime.UI
 {
-    public sealed class UIGenericButton : SerializedMonoBehaviour
+    public sealed class UIGenericButton : MonoBehaviour
     {
         [Header("Config")]
         [SerializeField]
