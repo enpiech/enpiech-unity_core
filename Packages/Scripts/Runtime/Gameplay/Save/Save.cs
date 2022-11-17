@@ -21,10 +21,6 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
             _setting = setting;
         }
 
-        public Save()
-        {
-        }
-
         public Setting.Setting Setting
         {
             get => _setting;
