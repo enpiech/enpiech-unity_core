@@ -60,7 +60,7 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
         public bool LoadSaveDataFromDisk()
         {
             _saveData = new Save(_defaultSetting.Value);
-            if (!FileManager.LoadFromFile(_saveFileName, out var json) || string.IsNullOrEmpty(json))
+            if (FileManager.LoadFromFile(_saveFileName, out var json) && !string.IsNullOrEmpty(json))
             {
                 _saveData?.LoadFromJson(json);
             }
