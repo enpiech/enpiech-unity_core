@@ -59,22 +59,16 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
 
         public bool LoadSaveDataFromDisk()
         {
+            _saveData = new Save(_defaultSetting.Value);
             if (!FileManager.LoadFromFile(_saveFileName, out var json) || string.IsNullOrEmpty(json))
             {
-                return false;
+                _saveData?.LoadFromJson(json);
             }
-
-            _saveData?.LoadFromJson(json);
             return true;
         }
 
         private void SaveDataToDisk(Setting.Setting setting)
         {
-            if (!FileManager.MoveFile(_saveFileName, _backupSaveFileName))
-            {
-                return;
-            }
-
             if (_saveData == null)
             {
                 return;
