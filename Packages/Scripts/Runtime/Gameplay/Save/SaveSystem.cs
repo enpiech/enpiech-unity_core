@@ -64,6 +64,7 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
                 return false;
             }
 
+            _saveData = new Save(_defaultSetting.Value);
             _saveData?.LoadFromJson(json);
             return true;
         }
