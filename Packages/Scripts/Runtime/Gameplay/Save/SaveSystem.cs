@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Enpiech.Core.Runtime.Gameplay.Save
 {
     [CreateAssetMenu(fileName = "SaveSystem", menuName = "Game/SaveSystem")]
-    public class SaveSystem : DescriptionBaseSO
+    public sealed class SaveSystem : DescriptionBaseSO
     {
         [Header("Config")]
         [SerializeField]
@@ -30,7 +30,7 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
         [SerializeField]
         private SettingEvent _onSavedSettingLoaded = default!;
 
-        private readonly Save _saveData = new();
+        private Save? _saveData;
 
         private void OnEnable()
         {
@@ -46,7 +46,7 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
 
         private void OnLoadingSavedSetting()
         {
-            if (LoadSaveDataFromDisk())
+            if (LoadSaveDataFromDisk() && _saveData != null)
             {
                 _onSavedSettingLoaded.Raise(_saveData.Setting);
             }
@@ -64,13 +64,18 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
                 return false;
             }
 
-            _saveData.LoadFromJson(json);
+            _saveData?.LoadFromJson(json);
             return true;
         }
 
         private void SaveDataToDisk(Setting.Setting setting)
         {
             if (!FileManager.MoveFile(_saveFileName, _backupSaveFileName))
+            {
+                return;
+            }
+
+            if (_saveData == null)
             {
                 return;
             }
