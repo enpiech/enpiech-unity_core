@@ -14,7 +14,7 @@ namespace Enpiech.Core.Runtime.Gameplay.Save
     {
         [JsonProperty]
         [SerializeField]
-        private Setting.Setting _setting = new();
+        private Setting.Setting _setting;
 
         public Save(Setting.Setting setting)
         {

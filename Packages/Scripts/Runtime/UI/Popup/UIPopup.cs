@@ -40,8 +40,8 @@ namespace Enpiech.Core.Runtime.UI.Popup
 
         private void OnDisable()
         {
-            _negativeButton.Clicked -= CancelButtonClicked;
-            _positiveButton.Clicked -= ConfirmButtonClicked;
+            _negativeButton.Clicked.RemoveListener(CancelButtonClicked);
+            _positiveButton.Clicked.RemoveListener(ConfirmButtonClicked);
             _taskCompletion.TrySetResult(false);
         }
 
@@ -60,12 +60,12 @@ namespace Enpiech.Core.Runtime.UI.Popup
 
             if (isConfirmation) // needs two button : Is a decision 
             {
-                _negativeButton.Clicked += CancelButtonClicked;
-                _positiveButton.Clicked += ConfirmButtonClicked;
+                _negativeButton.Clicked.AddListener(CancelButtonClicked);
+                _positiveButton.Clicked.AddListener(ConfirmButtonClicked);
             }
             else // needs only one button : Is an information 
             {
-                _positiveButton.Clicked += ConfirmButtonClicked;
+                _positiveButton.Clicked.AddListener(ConfirmButtonClicked);
             }
         }
 

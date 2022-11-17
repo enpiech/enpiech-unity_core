@@ -23,17 +23,13 @@ namespace Enpiech.Core.Runtime.Gameplay.Setting
 
         [JsonProperty]
         [SerializeField]
-        private int _qualityLevel = 2;
+        private int _qualityLevel = 1;
 
         [JsonProperty]
         [SerializeField]
         private Locale _locale;
 
-
-        public Setting()
-        {
-        }
-
+        [JsonConstructor]
         public Setting(float masterVolume, float musicVolume, float sfxVolume, int qualityLevel, Locale locale)
         {
             _masterVolume = masterVolume;

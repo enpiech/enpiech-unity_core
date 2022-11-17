@@ -10,14 +10,13 @@ namespace Enpiech.Core.Runtime.UI
     {
         [Header("Config")]
         [SerializeField]
-        [Tooltip("Nullable")]
         private LocalizeStringEvent? _buttonText;
 
         [Header("Reference")]
         [SerializeField]
         private Button _button = default!;
 
-        public UnityAction Clicked = delegate { };
+        public UnityEvent Clicked;
 
         public void SetButton(bool isSelected)
         {
